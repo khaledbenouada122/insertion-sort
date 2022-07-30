@@ -1,0 +1,23 @@
+ALGORITHM insertion_sort
+VAR
+  val, i,j, N: INTEGER
+ Tab : ARRAY_OF integer[N];
+BEGIN
+// craetion et remplissage d'un tableu avec un longeur N : 
+   write("donner le longeur de tableau")
+   read(N)
+   FOR i FROM 1 TO N-1 STEP 1  DO
+    write(" remplir le tableau")
+    read(tab[i])
+   END_FOR
+   //trie par insertion  : 
+   FOR i FROM 1 TO N-1 STEP 1  DO
+     val : = tab[i]
+     j:=i
+     WHILE (j>0 and (val<tab[j-1])) DO
+        tab[j] := tab[j-1]
+     END_WHILE
+      tab[j] := val
+   END_FOR
+
+END
